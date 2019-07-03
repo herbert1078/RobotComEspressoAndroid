@@ -4,18 +4,20 @@ Esse projeto é para os analistas de Testes Utilizarem o Espresso Android Test.
 
 Projeto editado a parte de espresso android.
 
-License
--------
+Adicionado a Classe de ScreenRobot com vários métodos que podemos utilizar nos testes de UI para o Android.
 
+# Metodos importantes utilizados:
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+- Clicar sobre um objeto.
+- Clicar sobre uma String.
+- Clicar sobre um card em uma lista de elementos.
+- Escrever em um campo.
+- Validar hint dos campos.
+- Validar uma string dentro de um botão.
+- Validar strings na tela do usuário.
+- Scrollar até a parte inferior da tela.
+- Scrollar até a parte superior da tela.
+- Validar um elemento pequeno na tela do usuário.
+- Testes utilizando mock.
+- Testes com estrutura de Robot e Espresso Android.
+- Testes de forma mais básica do Espresso Android.
