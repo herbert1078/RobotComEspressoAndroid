@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion 27
+  buildToolsVersion '27.0.0'
+
+  defaultConfig {
+    applicationId "com.example.heitorcolangelo.espressotests"
+    minSdkVersion 16
+    targetSdkVersion 27
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    vectorDrawables.useSupportLibrary = true
+    testInstrumentationRunnerArguments clearPackageData: 'true'
+
+    resConfigs "en"
+    javaCompileOptions {
+      annotationProcessorOptions {
+        includeCompileClasspath true
+      }
+    }
+  }
+
+  testOptions {
+    execution 'ANDROID_TEST_ORCHESTRATOR'
+  }
+
+
+  def baseUrl = '"http://api.randomuser.me/"'
+
+  buildTypes {
+    debug {
+      minifyEnabled false
+      buildConfigField 'String', 'BASE_URL', baseUrl
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+final butterKnifeVersion = '8.1.0'
+final picassoVersion = '2.5.2'
+final okHttpVersion = '3.3.1'
+final androidSupportVersion = '27.1.1'
+final retrofitVersion = '2.0.2'
+final espressoVersion = '3.0.2'
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+  //Orchestrator
+  androidTestUtil 'com.android.support.test:orchestrator:1.0.2'
+
+  // Picasso
+  compile "com.squareup.picasso:picasso:$picassoVersion"
+
+  // ButterKnife
+  compile "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+  compile "com.jakewharton:butterknife:$butterKnifeVersion"
+
+  // EventBus
+  compile 'org.greenrobot:eventbus:3.0.0'
+
+  // OkHttp
+  compile "com.squareup.okhttp3:okhttp:$okHttpVersion"
+  compile "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+
+  // Retrofit
+  compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+  compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+  // Espresso
+    androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
+    androidTestCompile "com.android.support.test.espresso:espresso-intents:$espressoVersion"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestCompile "com.android.support:support-annotations:$androidSupportVersion"
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:appcompat-v7:$androidSupportVersion"
+    compile "com.android.support:recyclerview-v7:$androidSupportVersion"
+
+  // MockWebServer
+  androidTestCompile "com.squareup.okhttp3:mockwebserver:$okHttpVersion"
+
+  // Mirror
+  androidTestCompile "net.vidageek:mirror:1.6.1"
+
+}
+
