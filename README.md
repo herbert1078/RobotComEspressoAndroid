@@ -21,3 +21,9 @@ Adicionado a Classe de ScreenRobot com vários métodos que podemos utilizar nos
 - Testes utilizando mock.
 - Testes com estrutura de Robot e Espresso Android.
 - Testes de forma mais básica do Espresso Android.
+- Swipe para a direita.
+- Swipe para a esquerda.
+- Validar texto em um dialog.
+- Clicar em Voltar com o botão externo do Android.
+- Validar se um elemento não está sendo apresentado na tela.
+- Validar se um elemento não existe na tela.
