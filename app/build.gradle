@@ -49,44 +49,43 @@ final espressoVersion = '3.0.2'
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
-
   //Orchestrator
   androidTestUtil 'com.android.support.test:orchestrator:1.0.2'
 
   // Picasso
-  compile "com.squareup.picasso:picasso:$picassoVersion"
+  implementation "com.squareup.picasso:picasso:$picassoVersion"
 
   // ButterKnife
-  compile "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
-  compile "com.jakewharton:butterknife:$butterKnifeVersion"
+  implementation "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+  implementation "com.jakewharton:butterknife:$butterKnifeVersion"
 
   // EventBus
-  compile 'org.greenrobot:eventbus:3.0.0'
+  implementation 'org.greenrobot:eventbus:3.0.0'
 
   // OkHttp
-  compile "com.squareup.okhttp3:okhttp:$okHttpVersion"
-  compile "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+  implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+  implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
 
   // Retrofit
-  compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
-  compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+  implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+  implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
   // Espresso
     androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
     androidTestCompile "com.android.support.test.espresso:espresso-intents:$espressoVersion"
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
-    androidTestCompile "com.android.support:support-annotations:$androidSupportVersion"
-    testCompile 'junit:junit:4.12'
-    compile "com.android.support:appcompat-v7:$androidSupportVersion"
-    compile "com.android.support:recyclerview-v7:$androidSupportVersion"
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation "com.android.support:support-annotations:$androidSupportVersion"
+    testImplementation 'junit:junit:4.12'
+    implementation "com.android.support:appcompat-v7:$androidSupportVersion"
+    implementation "com.android.support:recyclerview-v7:$androidSupportVersion"
 
   // MockWebServer
-  androidTestCompile "com.squareup.okhttp3:mockwebserver:$okHttpVersion"
+  androidTestImplementation "com.squareup.okhttp3:mockwebserver:$okHttpVersion"
 
   // Mirror
-  androidTestCompile "net.vidageek:mirror:1.6.1"
+  androidTestImplementation "net.vidageek:mirror:1.6.1"
 
 }
 
