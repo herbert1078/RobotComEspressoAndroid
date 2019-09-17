@@ -27,3 +27,4 @@ Adicionado a Classe de ScreenRobot com vários métodos que podemos utilizar nos
 - Clicar em Voltar com o botão externo do Android.
 - Validar se um elemento não está sendo apresentado na tela.
 - Validar se um elemento não existe na tela.
+- Aguardar um elemento na tela.
