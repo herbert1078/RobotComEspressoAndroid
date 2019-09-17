@@ -3,6 +3,8 @@ package com.example.heitorcolangelo.espressotests.EspressoVersao2.robot;
 import com.example.heitorcolangelo.espressotests.R;
 import com.example.heitorcolangelo.espressotests.common.ScreenRobot;
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
 import static com.example.heitorcolangelo.espressotests.EspressoVersao2.constants.ConstantsVersao2.EMAIL;
 import static com.example.heitorcolangelo.espressotests.EspressoVersao2.constants.ConstantsVersao2.HINT_EMAIL;
 import static com.example.heitorcolangelo.espressotests.EspressoVersao2.constants.ConstantsVersao2.HINT_SENHA;
@@ -11,6 +13,7 @@ import static com.example.heitorcolangelo.espressotests.EspressoVersao2.constant
 import static com.example.heitorcolangelo.espressotests.EspressoVersao2.constants.ConstantsVersao2.TITULO_LOGIN;
 import static com.example.heitorcolangelo.espressotests.EspressoVersao2.constants.ConstantsVersao2.TXT1_POPUP;
 import static com.example.heitorcolangelo.espressotests.EspressoVersao2.constants.ConstantsVersao2.TXT2_POPUP;
+import static com.example.heitorcolangelo.espressotests.common.waitElement.waitId;
 
 public class RobotVersao2 extends ScreenRobot<RobotVersao2> {
 
@@ -85,6 +88,7 @@ public class RobotVersao2 extends ScreenRobot<RobotVersao2> {
     }
 
     public RobotVersao2 ClicarCard2(){
+        onView(isRoot()).perform(waitId(NOME_PARA_O_USUARIO, 5000));
         clickOnCardForList(NOME_PARA_O_USUARIO, 2);
         return this;
     }

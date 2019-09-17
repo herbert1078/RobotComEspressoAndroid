@@ -3,12 +3,17 @@ package com.example.heitorcolangelo.espressotests.EspressoVersao2;
 import android.support.test.rule.ActivityTestRule;
 
 import com.example.heitorcolangelo.espressotests.EspressoVersao2.robot.RobotVersao2;
+import com.example.heitorcolangelo.espressotests.R;
 import com.example.heitorcolangelo.espressotests.ui.activity.LoginActivity;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
+import static com.example.heitorcolangelo.espressotests.common.waitElement.waitId;
 
 public class CasoDeTesteVersao2 {
 
@@ -105,7 +110,6 @@ public class CasoDeTesteVersao2 {
                 .EscreverEmail()
                 .EscreverSenha()
                 .clicarNoLogin()
-                .sleep(5)
                 .ClicarCard2()
                 .sleep(5);
     }

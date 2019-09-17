@@ -45,8 +45,8 @@ public class CasosDeTestesVersao1 {
         onView(withId(R.id.login_username)).check(matches(isDisplayed()));
         onView(withId(R.id.login_password)).check(matches(isDisplayed()));
         onView(withId(R.id.login_button)).check(matches(isDisplayed()));
-        onView(withId(R.id.login_username)).check(matches(withHint("Digite Seu Username Ou Email")));
-        onView(withId(R.id.login_password)).check(matches(withHint("Digite Sua Senha")));
+        onView(withId(R.id.login_username)).check(matches(withHint("Type your username")));
+        onView(withId(R.id.login_password)).check(matches(withHint("Type your password")));
         onView(withText("Espresso Tests")).check(matches(isDisplayed()));
 
     }
